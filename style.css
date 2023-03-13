@@ -4,7 +4,10 @@ body {
     font-family: "Orbitron", sans-serif;
     color: white;
     background: linear-gradient(to bottom, black, midnightblue);
-    /* height: 100vh; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .navbar {
@@ -12,14 +15,20 @@ body {
 }
 
 .nav-link:hover {
-    color: #FFE81F;
+    color: white;
+}
+
+a.active {
+    color: #FFE81F !important;
 }
 
 footer {
     text-align: center;
     font-size: 12px;
     letter-spacing: 1px;
-    margin-top: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .hilt {
@@ -101,8 +110,7 @@ footer {
 }
 
 .content {
-    /* background-color: beige; */
-    height: 565px;
+    height: 550px;
 }
 
 .lightsaber-container {
@@ -114,7 +122,6 @@ footer {
     border: 10px solid;
     border-image: linear-gradient(to bottom right, cyan, blue) 1;
     margin-top: 50px;
-    height: 200px;
 }
 
 .display p {
@@ -150,6 +157,33 @@ footer {
     color: #FFE81F;
 }
 
+.card-climate, .card-terrain, .card-population {
+    color: white;
+}
+
 h6 {
     color: aqua;
+}
+
+@media (max-width: 1800px) {
+
+    footer {
+        position: unset;
+        bottom: unset;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+}
+    
+@media (max-width: 1024px) {
+
+    .content {
+        height: 300px;
+    }
+
+    .display {
+        margin-top: 100px;
+    }
+
 }

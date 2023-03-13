@@ -5,18 +5,31 @@ function corrupt() {
     blade.style.boxShadow = "0 0 50px 20px red";
 }
 
-let isOn = true;
+
+let isOn = false;
 
 function turnOnOff() {
-    let blade = document.querySelector(".blade");
-    if (blade.style.visibility == "hidden") {
-        blade.style.visibility = "visible";
-    } else {
-        blade.style.visibility = "hidden";
-    }
+    isOn = !isOn;
+    let blade = document.querySelector('.blade');
+    blade.style.display = isOn ? 'inline-block' : 'none';
 }
 
 
+axios('https://swapi.dev/api/planets/?format=json')
+.then(axiosData => {console.log(axiosData); addCards(axiosData.data)});
+
+
+function addCards(axiosData) {
+
+axiosData.results.forEach(entry => {
+    const template = document.getElementById("card-template").content.cloneNode(true);
+    template.querySelector(".card-title").innerText = entry.name;
+    template.querySelector(".card-climate").innerText = entry.climate;
+    template.querySelector(".card-terrain").innerText = entry.terrain;
+    template.querySelector(".card-population").innerText = entry.population;
+    document.querySelector("#card-list").appendChild(template);
+});
+}
 
 
 function printName(event) {
