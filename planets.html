@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Star Wars fansite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lightsabers.html">LIGHTSABERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="planets.html">PLANETS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="force.html">FORCE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+  <main>
+
+    <section class="content container">
+      <template id="card-template">
+        <div class="card" style="width: 18rem; margin:10px">
+            <div class="card-content">
+                <h5 class="card-title"></h5>
+                <h6>Climate:</h6><span class="card-climate"></span>
+                <h6>Terrain:</h6><span class="card-terrain"></span>
+                <h6>Population:</h6><span class="card-population"></span>
+            </div>
+        </div>
+      </template>
+      <div id="card-list" class="row"></div>
+    </section>
+
+    <section class="description container">
+      <div class="display">
+        <p>The Star Wars universe is home to a vast array of planets, each with its own unique features and characteristics. From the desert world of Tatooine to the forest moon of Endor, the planets in Star Wars offer a diverse range of environments that serve as backdrops for the series' iconic battles and adventures. Some of the most notable planets in the franchise include Coruscant, a bustling metropolis and the capital of the Galactic Republic; Hoth, an icy planet used as a Rebel Alliance base in The Empire Strikes Back; and Dagobah, a swampy world where Luke Skywalker trained with Jedi Master Yoda. The planets in Star Wars often have their own distinct cultures and civilizations, adding depth and richness to the galaxy far, far away.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Adam Sagar</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    axios('https://swapi.dev/api/planets/?format=json')
+        .then(axiosData => {console.log(axiosData); addCards(axiosData.data)});
+
+    function addCards(axiosData) {
+
+        axiosData.results.forEach(entry => {
+            const template = document.getElementById("card-template").content.cloneNode(true);
+            template.querySelector(".card-title").innerText = entry.name;
+            template.querySelector(".card-climate").innerText = entry.climate;
+            template.querySelector(".card-terrain").innerText = entry.terrain;
+            template.querySelector(".card-population").innerText = entry.population;
+            document.querySelector("#card-list").appendChild(template);
+        });
+    }
+  </script>
+  
+</body>
+
+</html>

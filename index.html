@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Star Wars fansite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        .custom-font {
+            font-family: "Starjedi";
+            color: #FFE81F;
+            font-size: 300%;
+            margin-left: 40px;
+            margin-right: 20px;
+
+        }
+
+        @font-face {
+            font-family: 'Starjedi';
+            src: url('/star_jedi/starjedi/Starjedi.ttf') format('truetype')
+        }
+
+        body {
+            text-align: center;
+            font-family: "Orbitron", sans-serif;
+            color: white;
+            background: linear-gradient(to top, black, midnightblue);
+            height: 100vh;
+            position: relative;
+        }
+
+        .enter {
+            margin-top: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .title-container {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .big-star {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 20px 5px white;
+            animation: flicker2 6s infinite;
+        }
+
+        .small-star {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 20px 5px white;
+            animation: flicker2 3s infinite;
+        }
+
+        .star1 {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star2 {
+            position: absolute;
+            top: 90%;
+            left: 95%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star3 {
+            position: absolute;
+            top: 10%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star4 {
+            position: absolute;
+            top: 90%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star5 {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star6 {
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star7 {
+            position: absolute;
+            top: 35%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star8 {
+            position: absolute;
+            top: 15%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star9 {
+            position: absolute;
+            top: 85%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star10 {
+            position: absolute;
+            top: 10%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star11 {
+            position: absolute;
+            top: 20%;
+            left: 3%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star12 {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star13 {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star14 {
+            position: absolute;
+            top: 95%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star15 {
+            position: absolute;
+            top: 45%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star16 {
+            position: absolute;
+            top: 65%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star17 {
+            position: absolute;
+            top: 15%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star18 {
+            position: absolute;
+            top: 80%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star19 {
+            position: absolute;
+            top: 60%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+        }
+
+        .star20 {
+            position: absolute;
+            top: 5%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes flicker2 {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="small-star star1"></div>
+        <div class="small-star star2"></div>
+        <div class="small-star star3"></div>
+        <div class="small-star star4"></div>
+        <div class="small-star star5"></div>
+        <div class="small-star star6"></div>
+        <div class="small-star star7"></div>
+        <div class="small-star star8"></div>
+        <div class="small-star star9"></div>
+        <div class="small-star star10"></div>
+        <div class="big-star star11"></div>
+        <div class="big-star star12"></div>
+        <div class="big-star star13"></div>
+        <div class="big-star star14"></div>
+        <div class="big-star star15"></div>
+        <div class="big-star star16"></div>
+        <div class="big-star star17"></div>
+        <div class="big-star star18"></div>
+        <div class="big-star star19"></div>
+        <div class="big-star star20"></div>
+
+        <div class="title-container">
+            <h2>A<span class="custom-font">Star Wars</span>fansite</h2>
+            <button type="button" class="btn btn-outline-light enter"><a href="lightsabers.html">This is the
+                    way</a></button>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

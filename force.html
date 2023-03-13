@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Star Wars fansite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lightsabers.html">LIGHTSABERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="planets.html">PLANETS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="force.html">FORCE</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+  <main>
+
+    <section class="content container">
+      <div class="greeting-container">
+        <div class="greeting">
+            <form onsubmit="printName(event)">
+                <div class="input-group mb-3">
+                    <input id="name" type="text" class="form-control-lg" placeholder="Enter your name..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Submit</button>
+                </div>
+                <div id="print-greeting"></div>
+            </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="description container">
+      <div class="display">
+        <p>The Force is a mysterious energy field created by life that binds the galaxy together. Harnessing the power of the Force gives the Jedi, the Sith, and others sensitive to this spiritual energy extraordinary abilities, such as levitating objects, tricking minds, and seeing things before they happen. While the Force can grant users powerful abilities, it also directs their actions. And it has a will of its own, which both scholars and mystics have spent millennia seeking to understand.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Adam Sagar</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    function printName(event) {
+        event.preventDefault();
+        let name = document.getElementById('name').value;
+        if (name) {
+            document.getElementById('print-greeting').innerHTML = `May the force be with you, ${name}!`;
+        } else {
+            document.getElementById('print-greeting').innerHTML = '';
+        };
+    }
+  </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, black, midnightblue);
+    /* height: 100vh; */
+}
+
+.navbar {
+    background-color: transparent !important;
+}
+
+.nav-link:hover {
+    color: #FFE81F;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.hilt {
+    height: 30px;
+    width: 150px;
+    background-color: gray;
+    display: inline-block;
+    border-radius: 5px;
+    background: linear-gradient(180deg, gray, black, gray);
+}
+
+.blade {
+    width: 600px;
+    height: 30px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(180deg, white, blue 20%, cyan 50%, blue 80%, white);
+    animation: flicker 0.3s infinite;
+    display: none;
+    box-shadow: 0 0 50px 20px blue;
+}
+
+.blade-emitter {
+    height: 35px;
+    width: 10px;
+    background-color: lightgray;
+    display: inline-block;
+    border-radius: 3px;
+    background: linear-gradient(180deg, white, gray, white);
+}
+
+.lightsaber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes flicker {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.iconify {
+    color: gray;
+    font-size: 50px;
+    rotate: 90deg;
+}
+
+.iconify:hover {
+    cursor: pointer;
+    font-size: 55px;
+    color: white;
+}
+
+.iconify:active {
+    font-size: 50px;
+}
+
+.iconify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.content {
+    /* background-color: beige; */
+    height: 565px;
+}
+
+.lightsaber-container {
+    position: relative;
+    top: 50%;
+}
+
+.display {
+    border: 10px solid;
+    border-image: linear-gradient(to bottom right, cyan, blue) 1;
+    margin-top: 50px;
+    height: 200px;
+}
+
+.display p {
+    margin: 20px;
+    text-align: justify;
+}
+
+.greeting-container {
+    position: relative;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.greeting {
+    height: 100%;
+    position: absolute;
+    top: 20%;
+}
+
+#print-greeting {
+    color: #FFE81F;
+    text-align: center;
+}
+
+.card {
+    background-color: transparent;
+    border: 3px solid white;
+    font-size: 12px;
+}
+
+.card-title {
+    color: #FFE81F;
+}
+
+h6 {
+    color: aqua;
+}
