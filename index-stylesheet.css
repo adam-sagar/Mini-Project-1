@@ -1,3 +1,4 @@
+/* adding custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 .custom-font {
@@ -14,6 +15,8 @@
     src: url('/star_jedi/starjedi/Starjedi.ttf') format('truetype')
 }
 
+
+/* page layout */
 body {
     text-align: center;
     font-family: "Orbitron", sans-serif;
@@ -23,18 +26,14 @@ body {
     position: relative;
 }
 
-.enter {
-    margin-top: 30px;
-}
+.enter { margin-top: 30px; }
 
 a {
     text-decoration: none;
     color: white;
 }
 
-a:hover {
-    color: black;
-}
+a:hover { color: black; }
 
 .title-container {
     position: absolute;
@@ -43,6 +42,8 @@ a:hover {
     transform: translateX(-50%);
 }
 
+
+/* positioning stars */
 .big-star {
     width: 5px;
     height: 5px;
@@ -201,23 +202,25 @@ a:hover {
     transform: translate(-50%, -50%);
 }
 
+
+/* reveal iframe */
+.star2:hover { cursor: pointer; }
+
+#iframe {
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+}
+
+
+/* animating stars */
 @keyframes flicker2 {
 
-    0%,
-    100% {
-        opacity: 1;
-    }
+    0%, 100% { opacity: 1; }
 
-    50% {
-        opacity: 0.5;
-    }
+    50% { opacity: 0.5; }
+
 }
 
-footer {
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 1px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+footer { text-align: center; font-size: 12px; letter-spacing: 1px; position: fixed; bottom: 0; width: 100%; }
