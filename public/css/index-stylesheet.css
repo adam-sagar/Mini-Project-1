@@ -50,7 +50,7 @@ a:hover { color: black; }
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 0 20px 5px white;
-    animation: flicker2 6s infinite;
+    animation: flicker 3s infinite;
 }
 
 .small-star {
@@ -59,7 +59,7 @@ a:hover { color: black; }
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 0 20px 5px white;
-    animation: flicker2 3s infinite;
+    animation: flicker 1.5s infinite;
 }
 
 .star1 {
@@ -215,7 +215,7 @@ a:hover { color: black; }
 
 
 /* animating stars */
-@keyframes flicker2 {
+@keyframes flicker {
 
     0%, 100% { opacity: 1; }
 
