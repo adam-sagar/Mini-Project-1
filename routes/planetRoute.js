@@ -8,9 +8,4 @@ router.get('/control', (req, res) => {
     // console.log('test')
 })
 
-router.get('/thing', (req, res) => {
-    // planetController.getPlanets(req, res)
-    console.log('test')
-})
-
 module.exports = router;
