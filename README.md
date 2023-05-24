@@ -1,9 +1,9 @@
-=====STAR WARS FANSITE README=====
+===== STAR WARS FANSITE README =====
 
 Welcome to my Star Wars Fansite! This website was created as part of the Institute of Data's Software Engineering bootcamp. It serves as a platform for Star Wars enthusiasts to explore information about planets, lightsabers, and the Force. This readme will provide you with essential information about the website and its key features.
 
 
------TECHNOLOGIES USED-----
+----- TECHNOLOGIES USED -----
 
 The Star Wars Fansite is built using the following technologies:
 
@@ -22,7 +22,7 @@ The Star Wars Fansite is built using the following technologies:
     -   External API: Provides data related to planets, lightsabers, and the Force.
 
 
------FEATURES-----
+----- FEATURES -----
 
 The Star Wars Fansite offers the following key features:
 
@@ -43,7 +43,7 @@ The Star Wars Fansite offers the following key features:
     Custom fonts have been incorporated to match the aesthetics of the Star Wars universe.
 
 
------DEPLOYMENT-----
+----- DEPLOYMENT -----
 
 To use the Star Wars Fansite, follow these steps:
 
@@ -64,7 +64,7 @@ To use the Star Wars Fansite, follow these steps:
     8   Enjoy exploring the vast Star Wars universe!
 
 
------CREDITS-----
+----- CREDITS -----
 
 This Star Wars Fansite was created by Adam Sagar. It utilizes data from an external API. Special thanks to SWAPI the API provider for making this project possible.
 
