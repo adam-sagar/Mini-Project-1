@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 
 app.use('/', express.static('public'))
-app.use('/planets', planetRoute) // telling the app to use planetRoute at the specified location. to access this file use /planets
+app.use('/planets', planetRoute) // telling the app to use planetRoute at the specified location. To access this file use /planets
 app.use('/testRoute', testRoute)
 
 app.listen(port, () => {

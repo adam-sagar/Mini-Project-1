@@ -21,7 +21,7 @@ function turnOnOff() {
 
 
 // retrieve API planet data and put into card template
-axios('http://localhost:3004/planets/control')
+axios('http://localhost:3000/planets/control')
     .then(axiosData => { console.log(axiosData); addCards(axiosData.data) });
 
 
