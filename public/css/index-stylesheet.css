@@ -26,14 +26,18 @@ body {
     position: relative;
 }
 
-.enter { margin-top: 30px; }
+.enter {
+    margin-top: 30px;
+}
 
 a {
     text-decoration: none;
     color: white;
 }
 
-a:hover { color: black; }
+a:hover {
+    color: black;
+}
 
 .title-container {
     position: absolute;
@@ -74,6 +78,17 @@ a:hover { color: black; }
     top: 90%;
     left: 95%;
     transform: translate(-50%, -50%);
+}
+
+.star2 .clickable-area {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
 }
 
 .star3 {
@@ -204,7 +219,9 @@ a:hover { color: black; }
 
 
 /* reveal iframe */
-.star2:hover { cursor: pointer; }
+.star2:hover {
+    cursor: pointer;
+}
 
 #iframe {
     position: fixed;
@@ -213,14 +230,32 @@ a:hover { color: black; }
     z-index: 1;
 }
 
+/* positioning button to close iframe */
+#closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 /* animating stars */
 @keyframes flicker {
 
-    0%, 100% { opacity: 1; }
+    0%,
+    100% {
+        opacity: 1;
+    }
 
-    50% { opacity: 0.5; }
+    50% {
+        opacity: 0.5;
+    }
 
 }
 
-footer { text-align: center; font-size: 12px; letter-spacing: 1px; position: fixed; bottom: 0; width: 100%; }
+footer {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

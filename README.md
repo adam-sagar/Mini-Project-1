@@ -42,6 +42,8 @@ The Star Wars Fansite offers the following key features:
     
     Custom fonts have been incorporated to match the aesthetics of the Star Wars universe.
 
+    P.S. One of the stars on the homepage hides a secret...
+
 
 ----- DEPLOYMENT -----
 

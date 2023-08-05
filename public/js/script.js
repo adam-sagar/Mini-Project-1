@@ -28,7 +28,9 @@ axios('http://localhost:3000/planets/control')
 function addCards(axiosData) {
 
     axiosData.results.forEach(entry => {
+
         const template = document.getElementById("card-template").content.cloneNode(true);
+        
         template.querySelector(".card-title").innerText = entry.name;
         template.querySelector(".card-climate").innerText = entry.climate;
         template.querySelector(".card-terrain").innerText = entry.terrain;

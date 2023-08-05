@@ -16,7 +16,9 @@
     <main class="container">
 
         <div class="small-star star1"></div>
-        <div class="small-star star2"></div>
+        <div class="small-star star2">
+            <div class="clickable-area"></div>
+        </div>
         <div class="small-star star3"></div>
         <div class="small-star star4"></div>
         <div class="small-star star5"></div>
@@ -38,13 +40,19 @@
 
         <div class="title-container">
             <h2>A<span class="custom-font">Star Wars</span>Fansite</h2>
-            <button type="button" class="btn btn-outline-light enter"><a href="lightsabers.html">This is the
-                    way</a></button>
+            <button type="button" class="btn btn-outline-light enter"><a href="lightsabers.html">This is the way</a></button>
         </div>
 
-        <iframe style="display:none" id="iframe" width="1046" height="588" src="https://www.youtube.com/embed/1w8Z0UOXVaY" title="&quot;STAR WARS: A Bad Lip Reading&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
     </main>
+
+    <div class="iframe-container">
+        <iframe style="display:none" id="iframe" width="1046" height="588" src="https://www.youtube.com/embed/1w8Z0UOXVaY"
+            title="&quot;STAR WARS: A Bad Lip Reading&quot;" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+        <button id="closeButton" class="btn btn-danger close-button">X</button>
+    </div>
 
     <footer>
         <p>&copy; 2023 Adam Sagar</p>
@@ -52,12 +60,26 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
+
         let star2 = document.querySelector('.star2');
-        let iframe = document.querySelector('#iframe');
+        let iframe = document.getElementById('iframe');
+        let closeButton = document.getElementById('closeButton')
 
         star2.addEventListener('click', function () {
             iframe.style.display = 'block';
+            closeButton.style.display = 'block';
         });
+
+        closeButton.addEventListener('click', function() {
+
+            iframe.src = iframe.src; // reloads the iframe and stops video playback
+
+            iframe.style.display = 'none';
+            closeButton.style.display = 'none';
+        })
+
+        closeButton.style.display = 'none';
+
     </script>
 </body>
 
